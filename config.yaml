@@ -1,0 +1,43 @@
+# Configuración del Bot de Minecraft
+
+# Servidor
+server:
+  host: "localhost"
+  port: 25565
+  name: "Mi Servidor"
+
+# Credenciales del bot
+bot:
+  username: "MineBot"
+  password: ""  # Dejar vacío si es servidor offline
+  offline_mode: true
+
+# Comportamiento del bot
+behavior:
+  auto_reconnect: true
+  reconnect_delay: 5  # segundos
+  movement_speed: 1.0
+  
+# Acciones automáticas
+actions:
+  movement:
+    enabled: true
+    random_walk: true
+    walk_radius: 50
+  
+  gathering:
+    enabled: true
+    target_blocks:
+      - "oak_log"
+      - "stone"
+      - "dirt"
+    max_items: 64
+  
+  building:
+    enabled: false
+    structures: []
+
+# Logging
+logging:
+  level: "INFO"
+  file: "bot.log"
