@@ -16,26 +16,39 @@ bot:
 behavior:
   auto_reconnect: true
   reconnect_delay: 5  # segundos
-  movement_speed: 1.0
-  
-# Acciones automáticas
-actions:
-  movement:
-    enabled: true
-    random_walk: true
-    walk_radius: 50
-  
-  gathering:
-    enabled: true
-    target_blocks:
-      - "oak_log"
-      - "stone"
-      - "dirt"
-    max_items: 64
-  
-  building:
-    enabled: false
-    structures: []
+  action_delay: 1.0  # segundos entre acciones
+  max_session_time: 0  # 0 = sin límite
+
+# Movimiento
+movement:
+  enabled: true
+  min_x: -100
+  max_x: 100
+  min_z: -100
+  max_z: 100
+
+# Recolección de bloques
+collection:
+  enabled: true
+  target_blocks:
+    - "oak_log"
+    - "stone"
+    - "dirt"
+    - "sand"
+    - "gravel"
+  max_items_per_block: 64
+
+# Construcción
+building:
+  enabled: true
+  build_blocks:
+    - "oak_wood"
+    - "stone"
+    - "bricks"
+  structures:
+    - "wall"
+    - "tower"
+    - "house"
 
 # Logging
 logging:
