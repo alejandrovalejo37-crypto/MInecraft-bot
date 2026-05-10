@@ -1,0 +1,4 @@
+minecraft-launcher-lib==5.4
+mcrcon==0.7.1
+pyyaml==6.0
+requests==2.31.0
